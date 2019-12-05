@@ -10,10 +10,9 @@ class QontoServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../config/qonto.php' => config_path('qonto.php'),
-        ], 'config');
+        ], ['config', 'qonto']);
 
         $this->app->singleton('qonto', function ($app) {
-
             return new Qonto();
         });
 

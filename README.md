@@ -19,7 +19,7 @@ Qonto is a new bank company for freelancers & companies (more infos : [qonto.eu]
 - If Laravel version < 5.8 :
    - Add `\Tavux\Qonto\Laravel\QontoServiceProvider::class` to your providers in `config/app.php`
    - Add `'Qonto' => \Tavux\Qonto\Laravel\Facades\Qonto::class` to your aliases in `config/app.php`
-
+- `php artisan vendor:publish --tag=qonto`
 
 ## How to use it ?
 
