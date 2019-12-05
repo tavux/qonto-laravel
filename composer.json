@@ -24,6 +24,5 @@
                 "Tavux\\Qonto\\Laravel\\QontoServiceProvider"
             ]
         }
-    },
-    "prefer-stable": true
+    }
 }
