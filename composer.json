@@ -1,0 +1,29 @@
+{
+    "name": "tavux/qonto-laravel",
+    "license": "MIT",
+    "description": "Qonto client for Laravel 5 and 6",
+    "version": "0.9.0",
+    "authors": [
+        {
+            "name": "TAVUX",
+            "homepage": "https://tavux.tech",
+            "email": "contact@tavux.tech"
+        }
+    ],
+    "require": {
+        "tavux/qonto-php": "^0.9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tavux\\Qonto\\Laravel\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tavux\\Qonto\\Laravel\\QontoServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
