@@ -2,7 +2,7 @@
     "name": "tavux/qonto-laravel",
     "license": "MIT",
     "description": "Qonto client for Laravel 5 and 6",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "authors": [
         {
             "name": "TAVUX",
