@@ -18,6 +18,7 @@ use Tavux\Qonto\Models\Transaction;
  * @method static Label[] listLabels(int $current_page=null, int $per_page=null)
  * @method static Membership[] listMemberships(int $current_page=null, int $per_page=null)
  * @method static Transaction[] listTransactions($slug, string $iban=null, string $status=null, string $updated_at_from=null, string $updated_at_to=null, string $settled_at_from=null, string $settled_at_to=null, string $sort_by=null, int $current_page=null, int $per_page=null)
+ * @see \Tavux\Qonto\Laravel\Qonto
  */
 class Qonto extends Facade
 {
