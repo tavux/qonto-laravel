@@ -8,7 +8,7 @@ return [
     'login' => env('QONTO_LOGIN'),
 
     /*
-     * Password to the QONTO API
+     * Secret key to the QONTO API
      */
-    'password' => env('QONTO_PASSWORD')
+    'secret_key' => env('QONTO_SECRET_KEY')
 ];

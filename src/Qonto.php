@@ -18,6 +18,7 @@ use Tavux\Qonto\QontoClient;
  * @method static Label[] listLabels(int $current_page=null, int $per_page=null)
  * @method static Membership[] listMemberships(int $current_page=null, int $per_page=null)
  * @method static Transaction[] listTransactions($slug, string $iban=null, string $status=null, string $updated_at_from=null, string $updated_at_to=null, string $settled_at_from=null, string $settled_at_to=null, string $sort_by=null, int $current_page=null, int $per_page=null)
+ * @method static void setCredentials($login, $secret_key)
  */
 class Qonto {
 
@@ -28,7 +29,7 @@ class Qonto {
 
     public function __construct()
     {
-        $this->qonto = new QontoClient(config('qonto.login'), config('qonto.password'));
+        $this->qonto = new QontoClient(config('qonto.login'), config('qonto.secret_key'));
     }
 
     public function __call($name, $arguments)
