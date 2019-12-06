@@ -15,7 +15,7 @@ Qonto is a new bank company for freelancers & companies (more infos : [qonto.eu]
 ## How to install it ?
 
 - `composer require tavux/qonto-laravel` 
-- edit `.env` and add `QONTO_LOGIN` and `QONTO_PASSWORD` with your API credentials (API login/password)
+- edit `.env` and add `QONTO_LOGIN` and `QONTO_SECRET_KEY` with your API credentials (see https://api-doc.qonto.eu/2.0/welcome/authentication)
 - If Laravel version < 5.8 :
    - Add `\Tavux\Qonto\Laravel\QontoServiceProvider::class` to your providers in `config/app.php`
    - Add `'Qonto' => \Tavux\Qonto\Laravel\Facades\Qonto::class` to your aliases in `config/app.php`
@@ -75,6 +75,15 @@ Qonto is a new bank company for freelancers & companies (more infos : [qonto.eu]
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getOrganization($id);
+
+    /**
+     * Change credentials to connect to Qonto API
+     * @see https://api-doc.qonto.eu/2.0/welcome/authentication
+     *
+     * @param string $login
+     * @param string $secret_key
+     */
+    public function setCredentials($login, $secret_key);
 ```
 
 #### Example 
