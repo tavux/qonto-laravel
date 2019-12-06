@@ -7,7 +7,7 @@ use Tavux\Qonto\Models\Label;
 use Tavux\Qonto\Models\Membership;
 use Tavux\Qonto\Models\Organization;
 use Tavux\Qonto\Models\Transaction;
-use Tavux\Qonto\Qonto as QontoClient;
+use Tavux\Qonto\QontoClient;
 
 /**
  * Class Qonto
