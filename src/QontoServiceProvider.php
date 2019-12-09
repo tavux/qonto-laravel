@@ -4,6 +4,11 @@ namespace Tavux\Qonto\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class QontoServiceProvider
+ * @package Tavux\Qonto\Laravel
+ *
+ */
 class QontoServiceProvider extends ServiceProvider
 {
     public function boot()

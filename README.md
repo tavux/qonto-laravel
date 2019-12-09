@@ -15,11 +15,11 @@ Qonto is a new bank company for freelancers & companies (more infos : [qonto.eu]
 ## How to install it ?
 
 - `composer require tavux/qonto-laravel` 
-- edit `.env` and add `QONTO_LOGIN` and `QONTO_SECRET_KEY` with your API credentials (see https://api-doc.qonto.eu/2.0/welcome/authentication)
 - If Laravel version < 5.8 :
    - Add `\Tavux\Qonto\Laravel\QontoServiceProvider::class` to your providers in `config/app.php`
    - Add `'Qonto' => \Tavux\Qonto\Laravel\Facades\Qonto::class` to your aliases in `config/app.php`
 - `php artisan vendor:publish --tag=qonto`
+- edit `.env` and add `QONTO_LOGIN` and `QONTO_SECRET_KEY` with your API credentials (see https://api-doc.qonto.eu/2.0/welcome/authentication)
 
 ## How to use it ?
 
@@ -30,60 +30,14 @@ Qonto is a new bank company for freelancers & companies (more infos : [qonto.eu]
 #### *qonto-laravel* Documentation
 
 ```php
-    /**
-     * @param string $slug
-     * @param string $iban
-     * @param array $status
-     * @param string $updated_at_from
-     * @param string $updated_at_to
-     * @param string $settled_at_from
-     * @param string $settled_at_to
-     * @param string $sort_by
-     * @param integer $current_page
-     * @param integer $per_page
-     * @return Transaction[]
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function listTransactions($slug, $iban=null, $status=null, $updated_at_from=null, $updated_at_to=null, $settled_at_from=null, $settled_at_to=null, $sort_by=null, $current_page=null, $per_page=null);
-
-    /**
-     * @param integer $current_page
-     * @param integer $per_page
-     * @return Label[]
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function listLabels($current_page=null, $per_page=null);
-
-    /**
-     * @param integer $current_page
-     * @param integer $per_page
-     * @return Membership[]
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function listMemberships($current_page=null, $per_page=null);
-
-    /**
-     * @param int $id
-     * @return Attachment
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function getAttachment($id);
-
-    /**
-     * @param int $id
-     * @return Organization
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function getOrganization($id);
-
-    /**
-     * Change credentials to connect to Qonto API
-     * @see https://api-doc.qonto.eu/2.0/welcome/authentication
-     *
-     * @param string $login
-     * @param string $secret_key
-     */
-    public function setCredentials($login, $secret_key);
+   /**
+    * @method static \Tavux\Qonto\Models\Attachment getAttachment(string $id)
+    * @method static \Tavux\Qonto\Models\Organization getOrganization(string $id)
+    * @method static \Tavux\Qonto\Models\Labels listLabels(int $current_page=null, int $per_page=null)
+    * @method static \Tavux\Qonto\Models\Memberships listMemberships(int $current_page=null, int $per_page=null)
+    * @method static \Tavux\Qonto\Models\Transactions listTransactions($slug, string $iban=null, string $status=null, string $updated_at_from=null, string $updated_at_to=null, string $settled_at_from=null, string $settled_at_to=null, string $sort_by=null, int $current_page=null, int $per_page=null)
+    * @method static void setCredentials($login, $secret_key)
+    */
 ```
 
 #### Example 
